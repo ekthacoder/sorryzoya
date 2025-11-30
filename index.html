@@ -1,153 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>For Zoya — I'm Sorry</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I'm Sorry Zoya</title>
+
   <style>
-    :root{
-      --bg:#fff6fb;
-      --accent:#ff4f82;
-      --soft:#ffe2f1;
-      --text:#2b2330;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;height:100%;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);}
-
-    /* MOBILE-FIRST LAYOUT */
-    body{display:flex;align-items:center;justify-content:center;padding:18px;}
-
-    .card{
-      width:100%;max-width:480px;background:white;border-radius:22px;padding:20px;box-shadow:0 8px 22px rgba(0,0,0,0.08);position:relative;overflow:hidden;
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(to bottom, #ffd6e8, #ffffff, #ffe6f2);
+      overflow-x: hidden;
+      text-align: center;
     }
 
-    h1{text-align:center;margin:0 0 6px;font-size:22px;}
-    p.lead{text-align:center;margin:0 0 16px;color:#5f5060;font-size:15px;line-height:1.4}
+    h1 {
+      font-size: 32px;
+      color: #d63384;
+      margin-top: 80px;
+      animation: fadeIn 1.2s ease-out;
+    }
 
-    /* Teddy smaller for mobile */
-    .teddy-wrap{text-align:center;margin-bottom:12px;}
-    svg.teddy{width:230px;height:auto;}
+    p {
+      color: #444;
+      font-size: 18px;
+      padding: 0 20px;
+      animation: fadeIn 1.6s ease-out;
+    }
 
-    /* floating hearts */
-    .heart-layer{position:absolute;inset:0;pointer-events:none;}
-    .heart{position:absolute;width:26px;height:26px;opacity:0.95}
+    .card {
+      background: white;
+      padding: 18px;
+      margin: 30px auto;
+      width: 80%;
+      border-radius: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      animation: popIn 1.3s ease-out;
+    }
 
-    @keyframes floatUp{0%{transform:translateY(0) scale(.8);opacity:0}10%{opacity:1}60%{transform:translateY(-70vh) scale(1.1)}100%{opacity:0}}
-    .h1{left:18%;bottom:0;animation:floatUp 8s linear infinite}
-    .h2{left:48%;bottom:-6%;animation:floatUp 9s linear infinite}
-    .h3{left:72%;bottom:0;animation:floatUp 7s linear infinite}
+    .heart {
+      font-size: 50px;
+      color: red;
+      animation: heartbeat 1.3s infinite;
+      margin-top: 20px;
+    }
 
-    /* buttons */
-    .btn{display:block;width:100%;text-align:center;background:var(--accent);color:white;padding:12px 10px;border-radius:14px;border:none;cursor:pointer;font-size:15px;font-weight:600;margin-top:12px;box-shadow:0 6px 14px rgba(255,79,130,0.22)}
-    .btn.ghost{background:transparent;color:var(--accent);border:2px solid #ffc6da;box-shadow:none;}
+    /* Floating tulips */
+    .tulip {
+      position: fixed;
+      width: 45px;
+      animation: floatUp 12s linear infinite;
+      opacity: 0.9;
+    }
 
-    .message-box{background:var(--soft);padding:14px;border-radius:16px;margin-top:14px;}
-    .typed{font-size:15px;min-height:70px;line-height:1.5;color:#4b3f4d}
+    @keyframes floatUp {
+      0% { transform: translateY(110vh) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+    }
 
-    footer{text-align:center;margin-top:10px;font-size:12px;color:#6b5b6b}
+    /* Soft animations */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+      100% { transform: scale(1); }
+    }
   </style>
 </head>
+
 <body>
+
+  <!-- Floating Tulips -->
+  <img src="https://i.imgur.com/8pFQFZD.png" class="tulip" style="left:10%; animation-delay:0s;">
+  <img src="https://i.imgur.com/8pFQFZD.png" class="tulip" style="left:30%; animation-delay:2s;">
+  <img src="https://i.imgur.com/8pFQFZD.png" class="tulip" style="left:50%; animation-delay:4s;">
+  <img src="https://i.imgur.com/8pFQFZD.png" class="tulip" style="left:70%; animation-delay:1s;">
+  <img src="https://i.imgur.com/8pFQFZD.png" class="tulip" style="left:85%; animation-delay:3s;">
+
+  <h1>I'm Really Sorry, Zoya 💗</h1>
+
+  <p>
+    I know I hurt you, and I know you cried the whole night because of me…
+    That breaks my heart more than you can imagine.
+    I promise you, from today and forever —
+    <br><br>
+    <b style="color:#d63384;">I will never be the reason for your tears again.</b>
+    <br><br>
+    You deserve peace, love, care and every soft thing in the world…
+    and I will protect your smile always.
+  </p>
+
   <div class="card">
-
-    <div class="teddy-wrap">
-      <svg class="teddy" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-        <g class="breath">
-          <ellipse cx="300" cy="360" rx="120" ry="100" fill="#d7a47a" />
-          <circle cx="300" cy="220" r="90" fill="#d7a47a" />
-          <circle cx="215" cy="150" r="38" fill="#d7a47a" />
-          <circle cx="385" cy="150" r="38" fill="#d7a47a" />
-          <circle cx="215" cy="150" r="22" fill="#ffd9bf" />
-          <circle cx="385" cy="150" r="22" fill="#ffd9bf" />
-          <ellipse cx="300" cy="240" rx="42" ry="26" fill="#8c5a3a" />
-          <circle cx="270" cy="220" r="12" fill="#2b2330" />
-          <circle cx="330" cy="220" r="12" fill="#2b2330" />
-          <circle cx="300" cy="260" r="7" fill="#2b2330" />
-          <path d="M285 276 Q300 288 315 276" stroke="#2b2330" stroke-width="4" fill="none" />
-        </g>
-      </svg>
-    </div>
-
-    <h1>Zoya, I’m deeply sorry ❤️</h1>
-    <p class="lead">Aaj jo hurt hua, meri niyyat waisi nahi thi. Tum mere liye bohot qeemti ho.</p>
-
-    <div class="message-box">
-      <div id="typed" class="typed">Tap below…</div>
-      <button id="openBtn" class="btn">Read My Apology 💗</button>
-      <button id="flowerBtn" class="btn ghost">Send a Flower 🌸</button>
-    </div>
-
-    <div id="finalMsg" style="display:none;margin-top:14px;font-size:14px;line-height:1.6;color:#3a2f3d">
-      Zoya… meri sabse pyari Zoya. Aaj jo lafz tum tak theek se nahi pahunch paaye, un sab ka mujhe bohot afsos hai. 
-      Tumhe dukh dena meri zindagi ki sabse aakhri cheez hai jo main kabhi chaah bhi nahi sakta. 
-      Tumhara dil naram hai, aur maine galti se use chhooliya—main maanta hoon. 
-      Main seekh raha hoon, badal raha hoon, aur har din tumhare liye behtar insaan ban raha hoon. 
-      Bas ek mauqa aur de do… main wada karta hoon tumhari muskurahat ko hamesha sambhal kar rakhunga. 
-      I love you, Zoya. Truly.
-    </div>
-
-    <footer>Made with love — I’m sorry, Zoya</footer>
-
-    <div class="heart-layer">
-      <div class="heart h1"><svg viewBox="0 0 32 32"><path d="M4 12 C4 7 8 4 12 7 C14 8.5 16 11 16 11 C16 11 18 8.5 20 7 C24 4 28 7 28 12 C28 19 16 25 16 25 C16 25 4 19 4 12 Z" fill="#ff7aa2"/></svg></div>
-      <div class="heart h2"><svg viewBox="0 0 32 32"><path d="M4 12 C4 7 8 4 12 7 C14 8.5 16 11 16 11 C16 11 18 8.5 20 7 C24 4 28 7 28 12 C28 19 16 25 16 25 C16 25 4 19 4 12 Z" fill="#ff5c8a"/></svg></div>
-      <div class="heart h3"><svg viewBox="0 0 32 32"><path d="M4 12 C4 7 8 4 12 7 C14 8.5 16 11 16 11 C16 11 18 8.5 20 7 C24 4 28 7 28 12 C28 19 16 25 16 25 C16 25 4 19 4 12 Z" fill="#ffc2d8"/></svg></div>
-    </div>
+    <h3 style="color:#d63384;">Zoya, you are my tulip 🌷</h3>
+    <p>Delicate. Rare. Precious. And I never want to lose you.</p>
   </div>
 
-<script>
-  const messages = [
-    "Zoya… please listen.",
-    "Meri taraf se jo bhi dard tumhe mila… woh meri ghalati thi.",
-    "Tum mera sukoon ho, mera pyar ho.",
-    "Main kabhi bhi tumhein jaanbujhkar hurt nahi kar sakta.",
-    "Tumhari muskurahat mere har din ka noor hai.",
-    "Bas ek mauqa aur — main sab theek kar dunga.",
-    "I love you, Zoya. Bohot zyada. 💗"
-  ];
+  <div class="heart">❤️</div>
 
-  const typedEl = document.getElementById('typed');
-  const openBtn = document.getElementById('openBtn');
-  const flowerBtn = document.getElementById('flowerBtn');
-  const finalMsg = document.getElementById('finalMsg');
-
-  function sleep(ms){return new Promise(r=>setTimeout(r,ms));}
-
-  async function playTyped(){
-    typedEl.textContent = '';
-    for(let i=0;i<messages.length;i++){
-      const msg = messages[i];
-      for(let j=0;j<=msg.length;j++){
-        typedEl.textContent = msg.slice(0,j);
-        await sleep(38);
-      }
-      await sleep(500);
-    }
-    finalMsg.style.display = 'block';
-  }
-
-  function popHeart(x,y){
-    const h = document.createElement('div');
-    h.style.position='fixed';h.style.left=(x-14)+'px';h.style.top=(y-14)+'px';h.style.width='28px';h.style.height='28px';h.style.pointerEvents='none';
-    h.innerHTML='<svg viewBox="0 0 32 32" width="100%" height="100%"><path d="M4 12 C4 7 8 4 12 7 C14 8.5 16 11 16 11 C16 11 18 8.5 20 7 C24 4 28 7 28 12 C28 19 16 25 16 25 C16 25 4 19 4 12 Z" fill="#ff5c8a"/></svg>';
-    document.body.appendChild(h);
-    h.animate([{transform:'translateY(0) scale(.8)',opacity:1},{transform:'translateY(-90px) scale(1.2)',opacity:0}],{duration:900});
-    setTimeout(()=>h.remove(),900);
-  }
-
-  openBtn.onclick = ()=>{playTyped();};
-
-  flowerBtn.onclick = ()=>{
-    flowerBtn.textContent='🌷 Sent!';
-    popHeart(window.innerWidth*0.6, window.innerHeight*0.4);
-    setTimeout(()=>{finalMsg.style.display='block'},600);
-  }
-
-  document.addEventListener('click', e=>{
-    if(e.target.id==='openBtn' || e.target.id==='flowerBtn') return;
-    popHeart(e.clientX,e.clientY);
-  });
-</script>
 </body>
 </html>
