@@ -1,111 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>I'm Sorry Zoya</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>I'm Sorry Zoya</title>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(to bottom, #ffd6e8, #ffffff, #ffe6f2);
-      overflow-x: hidden;
-      text-align: center;
-    }
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ffe6f2, #fff, #ffeaf6);
+    overflow-x: hidden;
+    text-align: center;
+  }
 
-    h1 {
-      font-size: 32px;
-      color: #d63384;
-      margin-top: 80px;
-      animation: fadeIn 1.2s ease-out;
-    }
+  h1 {
+    font-size: 34px;
+    color: #d63384;
+    margin-top: 90px;
+    font-weight: 700;
+    animation: fadeIn 1.5s ease-out;
+  }
 
-    p {
-      color: #444;
-      font-size: 18px;
-      padding: 0 20px;
-      animation: fadeIn 1.6s ease-out;
-    }
+  p {
+    font-size: 18px;
+    color: #444;
+    padding: 0 24px;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-out;
+  }
 
-    .card {
-      background: white;
-      padding: 18px;
-      margin: 30px auto;
-      width: 80%;
-      border-radius: 18px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      animation: popIn 1.3s ease-out;
-    }
+  .card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    width: 80%;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    animation: popIn 1.7s ease-out;
+  }
 
-    .heart {
-      font-size: 50px;
-      color: red;
-      animation: heartbeat 1.3s infinite;
-      margin-top: 20px;
-    }
+  .heart {
+    font-size: 55px;
+    color: #ff3b3b;
+    animation: heartbeat 1.3s infinite;
+    margin-top: 15px;
+  }
 
-    /* Floating tulips */
-    .tulip {
-      position: fixed;
-      width: 45px;
-      animation: floatUp 12s linear infinite;
-      opacity: 0.9;
-    }
+  /* Floating Tulips */
+  .tulip {
+    position: fixed;
+    width: 55px;
+    opacity: 0.95;
+    animation: floatUp 12s linear infinite;
+  }
 
-    @keyframes floatUp {
-      0% { transform: translateY(110vh) rotate(0deg); opacity: 1; }
-      100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
-    }
+  @keyframes floatUp {
+    0% { transform: translateY(110vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+  }
 
-    /* Soft animations */
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
+  /* Animations */
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
 
-    @keyframes popIn {
-      0% { transform: scale(0.7); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
+  @keyframes popIn {
+    0% {transform: scale(0.7); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+  }
 
-    @keyframes heartbeat {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.25); }
-      100% { transform: scale(1); }
-    }
-  </style>
+  @keyframes heartbeat {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.25);}
+    100% {transform: scale(1);}
+  }
+</style>
 </head>
 
 <body>
 
-  <!-- Floating Tulips -->
-  <img src="https://i.imgur.com/8pFQFZD.png" class="tulip" style="left:10%; animation-delay:0s;">
-  <img src="https://i.imgur.com/8pFQFZD.png" class="tulip" style="left:30%; animation-delay:2s;">
-  <img src="https://i.imgur.com/8pFQFZD.png" class="tulip" style="left:50%; animation-delay:4s;">
-  <img src="https://i.imgur.com/8pFQFZD.png" class="tulip" style="left:70%; animation-delay:1s;">
-  <img src="https://i.imgur.com/8pFQFZD.png" class="tulip" style="left:85%; animation-delay:3s;">
+<!-- Base64 Tulip -->
+<!-- Pink tulip PNG embedded permanently -->
+<!-- This image will NEVER break -->
+<script>
+  const tulipBase64 =
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABTUlEQVR4nO3aMQrCQBSF4dtOZBwbNG0Ax7AnCM1jA0whOYAV/QXpKZlMaqkOawx2UY8ailqXF/w83vGN9ofuUBev5nYeDgAAAAAAAAAAMB9knhk+NCA8Dm+zrQJ5AZt0ArOEtp+uWgL0E+nobBOhtAKcVwqDAVBBFzEvFJi1qV0C1Ik5+pUvNbK/CtYQgQki71o+xVQUNBM8DT6vKrrfE0kDSwFpC18AJpD+selfBqXAMd2r90BzGyF/F7Ai/3Gzdh0dX8GZFODdgNpTi27C3l2qCkCmDYJLdnOjFkA7LI4gAlnAgACIRbkIuAeGHWxirMRqkRkNvztNFVQVwKP1HjqCOUMIqFZ3VAbAVYSEuxBjjcgzvEfgQ/HVbUaz2QmiVjCwAAAAASUVORK5CYII=";
+</script>
 
-  <h1>I'm Really Sorry, Zoya 💗</h1>
+<!-- Floating tulips injected via JS -->
+<script>
+  for (let i = 0; i < 7; i++) {
+    const img = document.createElement("img");
+    img.src = tulipBase64;
+    img.className = "tulip";
+    img.style.left = `${10 + i * 12}%`;
+    img.style.animationDelay = `${i * 2}s`;
+    document.body.appendChild(img);
+  }
+</script>
 
-  <p>
-    I know I hurt you, and I know you cried the whole night because of me…
-    That breaks my heart more than you can imagine.
-    I promise you, from today and forever —
-    <br><br>
-    <b style="color:#d63384;">I will never be the reason for your tears again.</b>
-    <br><br>
-    You deserve peace, love, care and every soft thing in the world…
-    and I will protect your smile always.
+<h1>I'm Really Sorry, Zoya 💗</h1>
+
+<p>
+  I know I hurt you… and I know you cried the whole night because of me.  
+  That thought crushes me from inside.  
+  <br><br>
+  <b style="color:#d63384;">I promise from today, I will never let your eyes fill with tears again.</b>
+  <br><br>
+  You deserve softness, love, warmth, care…  
+  and Zoya, I will spend my life giving you that.
+</p>
+
+<div class="card">
+  <h2 style="color:#d63384; margin:0;">Zoya, you are my tulip 🌷</h2>
+  <p style="margin-top:8px;">
+    Delicate. Rare. Precious.  
+    I never want to hurt you again.
   </p>
+</div>
 
-  <div class="card">
-    <h3 style="color:#d63384;">Zoya, you are my tulip 🌷</h3>
-    <p>Delicate. Rare. Precious. And I never want to lose you.</p>
-  </div>
-
-  <div class="heart">❤️</div>
+<div class="heart">❤️</div>
 
 </body>
 </html>
